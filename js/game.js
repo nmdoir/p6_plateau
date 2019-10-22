@@ -1,13 +1,12 @@
-import { Weapon } from "./Weapon";
-import { Player } from "./Player";
-import { Grid } from "./Grid";
-import { Movement } from "./Movement";
+import {Movement} from "./movement";
+import {Grid} from "./grid";
+import {Weapon} from "./weapon";
 
 class Game {
     constructor(row, column) {
         this.row = row;
         this.column = column;
-        this.app = document.getElementById('app');
+        this.plateau = document.getElementById('plateau');
         this.playerTab = [];
         this.gridLength = this.row * this.column;
     }
@@ -37,7 +36,7 @@ class Game {
                 tr.appendChild(td)
             }
         }
-        this.app.appendChild(table);
+        this.plateau.appendChild(table);
         this.createNoAccess();
         this.createWeapon();
         this.createPlayer()
@@ -49,7 +48,7 @@ class Game {
         for (let i = 0; i < 50; i++) {
             cell = Grid.browseTab();
             cell.style.backgroundColor = 'black';
-            cell.setAttribute('data-accesscase', 0) //setAttribute?
+            cell.setAttribute('data-accesscase', 0)
         }
     }
 

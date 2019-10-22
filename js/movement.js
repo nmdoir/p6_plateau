@@ -1,5 +1,3 @@
-import {Player} from "./Player"
-
 class Movement {
     move(idCase, playerTab) {
         let player = null;
