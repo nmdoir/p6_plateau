@@ -8,21 +8,21 @@ class Player {
         this.playerTab = [
             {
                 "id":0,
-                "name": this.name, // "Soma"
+                "name": this.name,
                 "life": this.life,
                 "weapon": this.weapon,
                 "move": this.move,
                 "position": this.position,
-                "countMove": 0 //why?
+                "countMove": 0
             },
             {
                 "id":0,
-                "name": this.name, // "Julien"
+                "name": this.name,
                 "life": this.life,
                 "weapon": this.weapon,
                 "move": this.move,
                 "position": this.position,
-                "countMove": 0 //why?
+                "countMove": 0
             }
         ]
     }

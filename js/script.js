@@ -2,7 +2,7 @@ import {Game} from "./game"; //empêche les prompt donc prompt.js créé juste p
 
 
 $(document).ready(function() {
-        let game = new Game(10, 10);
+    let game = new Game(10, 10);
         game.createGrid();
     });
 
