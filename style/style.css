@@ -208,6 +208,8 @@ svg {
 
 table {
     border-collapse: collapse;
+    border: 1px black;
+    margin-left: 2rem;
 }
 
 caption {
@@ -10042,7 +10044,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
-.centered {
+.text-center {
     text-align: center;
     align-content: center;
     margin-top: 1rem;
@@ -10058,8 +10060,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 }
 
-.case {
+.tdstyle {
     border: 2px solid black;
     height: 50px;
     width: 50px;
+}
+
+table.center {
+    margin-left:auto;
+    margin-right:auto;
 }
