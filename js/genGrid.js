@@ -1,5 +1,5 @@
 import {Weapon} from "./weapon";
-import {Grid} from "../js_ex/grid";
+import {Cell} from "../js/cell";
 
 class GenGrid {
     constructor(row, column) {
@@ -59,19 +59,14 @@ class GenGrid {
     }
 
     createWeapon() {
-        let randomWeaponInt = 0;
         let cell = null;
-        let weapon = new Weapon();
-        let Cell = new Cell('access', null, null);
+        //let weapon = new Weapon();
+        //let Cell = new Cell('data-access', null, null);
 
-        for (let i = 0; i < 10; i++) {
-            randomWeaponInt = Math.floor(Math.random() * 5);
-
+        for (let i = 0; i < 8; i++) {
+            let randomWeapon = getRandomWeapon();
             cell = getRandomCell();
-
-            let randomWeapon = weapon.getRandomWeapon(randomWeaponInt);
-            cell.setAttribute('weapon', randomWeapon);
-            cell.className = randomWeapon
+            cell.setAttribute('data-weapon', randomWeapon);
         }
     }
 }

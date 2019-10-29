@@ -37,9 +37,8 @@ class Weapon {
 
         for (let i = 0; i < this.weaponTab.length; i++) {
             randomInt = Math.floor(Math.random() * this.weaponTab.length);
-
-            return this.weaponTab[randomInt].name;
         }
+            return this.weaponTab[randomInt].name;
     }
 
     getWeaponDamage() {
