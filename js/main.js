@@ -105,13 +105,33 @@ function getRandomWeapon() {
 
 function createWeapon() {
     let cell = null;
-    //let weapon = new Weapon();
-    //let Cell = new Cell('access', null, null);
 
     for (let i = 0; i < 8; i++) {
         let randomWeapon = getRandomWeapon();
         cell = getRandomCell(); //document.getElementById(id + randomInt);
-        cell.setAttribute('data-weapon', randomWeapon);
+        if (!cell.hasAttribute("data-weapon") || !cell.hasAttribute("data-access")) {
+            cell.setAttribute('data-weapon', randomWeapon);
+        }
+    }
+}
+
+let playerTab = [
+    {
+        "id":1,
+        "name": name_j1,
+    },
+    {
+        "id":2,
+        "name": name_j2,
+    }
+]
+function createPlayer() {
+    let cell = getRandomCell(); //document.getElementById(id + randomInt);
+        if (!cell.hasAttribute("data-weapon") || !cell.hasAttribute("data-access")) {
+            cell.setAttribute('data-player', "player1");
+        }
+    if (!cell.hasAttribute("data-weapon") || !cell.hasAttribute("data-access") || cell.hasAttribute('data-player')) {
+        cell.setAttribute('data-player', "player2");
     }
 }
 
@@ -123,6 +143,7 @@ $(document).ready(function() {
     createGrid();
     createNoAccess();
     createWeapon();
+    createPlayer();
 });
 
 /*$(document).ready(function() {

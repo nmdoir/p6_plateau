@@ -10070,3 +10070,35 @@ table.center {
     margin-left:auto;
     margin-right:auto;
 }
+
+[data-weapon="bow"] {
+    content:url(img/bow.PNG);
+}
+
+[data-weapon="knife"] {
+    content:url(img/knife.PNG);
+}
+
+[data-weapon="sword"] {
+    content:url(img/sword.PNG);
+}
+
+[data-weapon="pistol"] {
+    content:url(img/pistol.PNG);
+}
+
+[data-weapon="dynamite"] {
+    content:url(img/dynamite.PNG);
+}
+
+[data-weapon="bomb"] {
+    content:url(img/bomb.PNG);
+}
+
+[data-player="player1"] {
+    content:url(img/j1.png);
+}
+
+[data-player="player2"] {
+    content:url(img/j2.png);
+}
