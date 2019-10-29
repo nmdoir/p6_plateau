@@ -1,6 +1,6 @@
 import {Movement} from "./movement";
 import {Grid} from "./grid";
-import {Weapon} from "./weapon";
+import {Weapon} from "../js/weapon";
 
 class Game {
     constructor(row, column) {
