@@ -1,5 +1,4 @@
 import {Weapon} from "./weapon";
-import {Cell} from "../js/cell";
 
 class GenGrid {
     constructor(row, column) {
@@ -45,6 +44,17 @@ class GenGrid {
                 id = 'td-'
             }
             cell = document.getElementById(id + randomInt);
+
+            while (cell.hasAttribute("data-access") || cell.hasAttribute("data-weapon") || cell.hasAttribute("data-player")) {
+                randomInt = Math.floor(Math.random() * this.gridLength);
+                if (randomInt < 10) {
+                    id = 'td-0'
+                }
+                else {
+                    id = 'td-'
+                }
+                cell = document.getElementById(id + randomInt);
+            }
         }
         return cell;
     }

@@ -45,7 +45,7 @@ function getRandomCell() {
     let id = null;
     let cell = null;
 
-    for (i =0; i < 100; i++) {
+    for (i = 0; i < 100; i++) {
         randomInt = Math.floor(Math.random() * 100);
         if (randomInt < 10) {
             id = 'td-0'
@@ -53,6 +53,17 @@ function getRandomCell() {
             id = 'td-'
         }
         cell = document.getElementById(id + randomInt);
+
+        while (cell.hasAttribute("data-access") || cell.hasAttribute("data-weapon") || cell.hasAttribute("data-player")) {
+            randomInt = Math.floor(Math.random() * 100);
+            if (randomInt < 10) {
+                id = 'td-0'
+            }
+            else {
+                id = 'td-'
+            }
+            cell = document.getElementById(id + randomInt);
+        }
     }
     return cell;
 }
@@ -109,11 +120,9 @@ function createWeapon() {
     for (let i = 0; i < 8; i++) {
         let randomWeapon = getRandomWeapon();
         cell = getRandomCell(); //document.getElementById(id + randomInt);
-        if (!cell.hasAttribute("data-weapon") || !cell.hasAttribute("data-access")) {
             cell.setAttribute('data-weapon', randomWeapon);
         }
     }
-}
 
 let playerTab = [
     {
@@ -124,15 +133,13 @@ let playerTab = [
         "id":2,
         "name": name_j2,
     }
-]
+];
+
 function createPlayer() {
-    let cell = getRandomCell(); //document.getElementById(id + randomInt);
-        if (!cell.hasAttribute("data-weapon") || !cell.hasAttribute("data-access")) {
-            cell.setAttribute('data-player', "player1");
-        }
-    if (!cell.hasAttribute("data-weapon") || !cell.hasAttribute("data-access") || cell.hasAttribute('data-player')) {
-        cell.setAttribute('data-player', "player2");
-    }
+    let cellPlayer1 = getRandomCell(); //document.getElementById(id + randomInt);
+    cellPlayer1.setAttribute('data-player', "player1");
+    let cellPlayer2 = getRandomCell();
+    cellPlayer2.setAttribute('data-player', "player2");
 }
 
 

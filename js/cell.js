@@ -6,3 +6,5 @@ class Cell {
         this.player = player ? player : null;
     }
 }
+
+export {Cell}
