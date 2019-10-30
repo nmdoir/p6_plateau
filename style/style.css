@@ -10072,33 +10072,41 @@ table.center {
 }
 
 [data-weapon="bow"] {
-    content:url(img/bow.PNG);
+    background-image:url(img/bow.PNG);
+    background-size: 100% 100%;
 }
 
 [data-weapon="knife"] {
-    content:url(img/knife.PNG);
+    background-image:url(img/knife.PNG);
+    background-size: 100% 100%;
 }
 
 [data-weapon="sword"] {
-    content:url(img/sword.PNG);
+    background-image:url(img/sword.PNG);
+    background-size: 100% 100%;
 }
 
 [data-weapon="pistol"] {
-    content:url(img/pistol.PNG);
+    background-image:url(img/pistol.PNG);
+    background-size: 100% 100%;
 }
 
 [data-weapon="dynamite"] {
-    content:url(img/dynamite.PNG);
+    background-image:url(img/dynamite.PNG);
+    background-size: 100% 100%;
 }
 
 [data-weapon="bomb"] {
-    content:url(img/bomb.PNG);
+    background-image:url(img/bomb.PNG);
+    background-size: 100% 100%;
 }
 
 [data-player="player1"] {
-    content:url(img/j1.png);
+    background-image:url(img/j1.png);
+    background-size: 100% 100%;
 }
 
 [data-player="player2"] {
-    content:url(img/j2.png);
+    background-image:url(img/j2.png);
+    background-size: 100% 100%;
 }
