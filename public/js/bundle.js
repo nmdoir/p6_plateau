@@ -90,23 +90,10 @@
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _leftpad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./leftpad */ \"./src/js/leftpad.js\");\n\r\n\r\nconst serNos = [6934, 23111, 23114, 1001, 211161];\r\nconst strSNos = serNos.map(sn => Object(_leftpad__WEBPACK_IMPORTED_MODULE_0__[\"leftPad\"])(sn, 8, '0'));\r\nconsole.log(strSNos);\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/leftpad.js":
-/*!***************************!*\
-  !*** ./src/js/leftpad.js ***!
-  \***************************/
-/*! exports provided: leftPad */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"leftPad\", function() { return leftPad; });\n\r\n\r\nfunction leftPad(str, len, ch) {\r\n    const cache = [\r\n        \"\",\r\n        \" \",\r\n        \"  \",\r\n        \"   \",\r\n        \"    \",\r\n        \"     \",\r\n        \"      \",\r\n        \"       \",\r\n        \"        \",\r\n        \"         \"\r\n    ];\r\n    str = str + \"\";\r\n    len = len - str.length;\r\n    if (len <= 0) return str;\r\n    if (!ch && ch !== 0) ch = \" \";\r\n    ch = ch + \"\";\r\n    if (ch === \" \" && len < 10)\r\n        return () => {\r\n            cache[len] + str;\r\n        };\r\n    let pad = \"\";\r\n    while (true) {\r\n        if (len & 1) pad += ch;\r\n        len >>= 1;\r\n        if (len) ch += ch;\r\n        else break;\r\n    }\r\n    return `${pad}${str}`;\r\n}\n\n//# sourceURL=webpack:///./src/js/leftpad.js?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nTypeError: C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\src\\\\js\\\\index.js: Cannot read property 'bindings' of null\\n    at Scope.moveBindingTo (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\scope\\\\index.js:822:13)\\n    at BlockScoping.updateScopeInfo (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\babel-plugin-transform-es2015-block-scoping\\\\lib\\\\index.js:364:17)\\n    at BlockScoping.run (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\babel-plugin-transform-es2015-block-scoping\\\\lib\\\\index.js:330:12)\\n    at PluginPass.BlockStatementSwitchStatementProgram (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\babel-plugin-transform-es2015-block-scoping\\\\lib\\\\index.js:70:24)\\n    at newFn (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\visitors.js:179:21)\\n    at NodePath._call (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\path\\\\context.js:53:20)\\n    at NodePath.call (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\path\\\\context.js:40:17)\\n    at NodePath.visit (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\path\\\\context.js:88:12)\\n    at TraversalContext.visitQueue (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\context.js:112:16)\\n    at TraversalContext.visitSingle (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\context.js:84:19)\\n    at TraversalContext.visit (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\context.js:140:19)\\n    at Function.traverse.node (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\index.js:80:17)\\n    at traverse (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\traverse\\\\lib\\\\index.js:62:12)\\n    at transformFile (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\transformation\\\\index.js:119:29)\\n    at runSync (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\transformation\\\\index.js:48:5)\\n    at runAsync (C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\transformation\\\\index.js:35:14)\\n    at C:\\\\Users\\\\User\\\\Desktop\\\\OPENCLASSROOMS\\\\p6_plateau\\\\node_modules\\\\@babel\\\\core\\\\lib\\\\transform.js:34:34\\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
