@@ -99,8 +99,7 @@ class Player {
         return null //à quoi ça sert ?
     }
 
-    allowPlayerMovement(players, player) //pas compris cette fonction
-    //à quoi correspondent players et player? déclarés où?
+    allowPlayerMovement(players, player)
     {
         player.countMove = 0;
         if(players[0].move === true){

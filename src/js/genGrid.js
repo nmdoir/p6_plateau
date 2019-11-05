@@ -33,11 +33,10 @@ class GenGrid {
 
     getRandomCell() {
         let randomInt = 0;
-        let i = 0;
         let id = null;
         let cell = null;
 
-        for (i = 0; i < this.gridLength; i++) {
+        for (let i = 0; i < this.gridLength; i++) {
             randomInt = Math.floor(Math.random() * this.gridLength);
             if (randomInt < 10) {
                 id = 'td-0'
@@ -64,7 +63,7 @@ class GenGrid {
         for (let i = 0; i < 25; i++) {
             cell = getRandomCell();
             cell.style.backgroundColor = 'black';
-            cell.setAttribute('access', 0);
+            cell.setAttribute('data-access', 0);
         }
     }
 
@@ -86,6 +85,12 @@ class GenGrid {
         let cellPlayer2 = getRandomCell();
         cellPlayer2.setAttribute('data-player', "player2");
     }
+    createPlayer() {
+        for (let i = 0 ; i < this.playerTab.length; i++) {
+            let randomCell = getRandomCell();
+            this.playerTab[i].position = randomCell;
+            randomCell.setAttribute('data-player', this.playerTab[i].id);
+        }
 }
 
 export {GenGrid};
