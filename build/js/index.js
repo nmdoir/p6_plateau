@@ -1,10 +1,21 @@
 "use strict";
 
-var _leftpad = require("./leftpad");
+var _genGrid = require("../js/genGrid");
 
-var serNos = [6934, 23111, 23114, 1001, 211161];
-var partEl = document.getElementById('part-list');
-var strList = serNos.reduce(function (acc, element) {
-  return acc += "<li>".concat((0, _leftpad.leftPad)(element, 8, '0'), "</li>");
-}, '');
-partEl.innerHTML = strList;
+//Demander le nom des joueurs
+var name_j1 = prompt("Entrez le nom du joueur 1 : ");
+var name_j2 = prompt("Entrez le nom du joueur 2 : ");
+
+if (!name_j1 || name_j1 === "") {
+  name_j1 = "Joueur 1";
+}
+
+if (!name_j2 || name_j2 === "") {
+  name_j2 = "Joueur 2";
+} //Insérer la grille dans le HTML
+
+
+$(document).ready(function () {
+  var grid = new _genGrid.GenGrid(10, 10);
+  grid.createGrid();
+}); //cd /c/Users/User/Desktop/OPENCLASSROOMS/p6_plateau

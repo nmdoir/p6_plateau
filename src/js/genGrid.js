@@ -1,5 +1,3 @@
-import {Weapon} from "./weapon";
-
 class GenGrid {
     constructor(row, column) {
         this.row = row;
@@ -28,6 +26,9 @@ class GenGrid {
         }
 
         bloc.appendChild(table);
+        createNoAccess();
+        createWeapon();
+        createPlayer();
     }
 
     getRandomCell() {
@@ -49,8 +50,7 @@ class GenGrid {
                 randomInt = Math.floor(Math.random() * this.gridLength);
                 if (randomInt < 10) {
                     id = 'td-0'
-                }
-                else {
+                } else {
                     id = 'td-'
                 }
                 cell = document.getElementById(id + randomInt);
@@ -79,9 +79,16 @@ class GenGrid {
             cell.setAttribute('data-weapon', randomWeapon);
         }
     }
+
+    createPlayer() {
+        let cellPlayer1 = getRandomCell(); //document.getElementById(id + randomInt);
+        cellPlayer1.setAttribute('data-player', "player1");
+        let cellPlayer2 = getRandomCell();
+        cellPlayer2.setAttribute('data-player', "player2");
+    }
 }
 
-
+export {GenGrid};
 
 
 /* class Grid {
@@ -92,11 +99,5 @@ class GenGrid {
         this.gridLength = gridLength
     }
 
+ */
 
-//Generate random cells
-
-function genRandomCell() {
-
-} */
-
-export {GenGrid}
