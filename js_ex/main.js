@@ -120,9 +120,9 @@ function createWeapon() {
     for (let i = 0; i < 8; i++) {
         let randomWeapon = getRandomWeapon();
         cell = getRandomCell(); //document.getElementById(id + randomInt);
-        cell.setAttribute('data-weapon', randomWeapon);
+            cell.setAttribute('data-weapon', randomWeapon);
+        }
     }
-}
 
 let playerTab = [
     {
