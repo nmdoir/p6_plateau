@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GenGrid = void 0;
+exports["default"] = void 0;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -53,11 +53,10 @@ function () {
     key: "getRandomCell",
     value: function getRandomCell() {
       var randomInt = 0;
-      var i = 0;
       var id = null;
       var cell = null;
 
-      for (i = 0; i < this.gridLength; i++) {
+      for (var i = 0; i < this.gridLength; i++) {
         randomInt = Math.floor(Math.random() * this.gridLength);
 
         if (randomInt < 10) {
@@ -91,7 +90,7 @@ function () {
       for (var i = 0; i < 25; i++) {
         cell = getRandomCell();
         cell.style.backgroundColor = 'black';
-        cell.setAttribute('access', 0);
+        cell.setAttribute('data-access', 0);
       }
     }
   }, {
@@ -115,10 +114,21 @@ function () {
       var cellPlayer2 = getRandomCell();
       cellPlayer2.setAttribute('data-player', "player2");
     }
+  }, {
+    key: "createPlayer",
+    value: function createPlayer() {
+      for (var i = 0; i < this.playerTab.length; i++) {
+        var randomCell = getRandomCell();
+        this.playerTab[i].position = randomCell;
+        randomCell.setAttribute('data-player', this.playerTab[i].id);
+      }
+    }
   }]);
 
   return GenGrid;
 }();
+
+var _default = GenGrid;
 /* class Grid {
     constructor(cellId, access, player, weapon, gridLength) {
         this.cellId = attributeFirst ? attributeFirst : null;
@@ -129,5 +139,4 @@ function () {
 
  */
 
-
-exports.GenGrid = GenGrid;
+exports["default"] = _default;

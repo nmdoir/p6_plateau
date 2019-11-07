@@ -1,4 +1,4 @@
-import {GenGrid} from "../js/genGrid";
+import GenGrid from "../js/genGrid";
 
 //Demander le nom des joueurs
 var name_j1 = prompt("Entrez le nom du joueur 1 : ");

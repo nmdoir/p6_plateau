@@ -1,11 +1,14 @@
-class GenGrid {
-    constructor(row, column) {
+class GenGrid
+{
+    constructor(row, column)
+    {
         this.row = row;
         this.column = column;
         this.gridLength = this.row * this.column;
     }
 
-    createGrid() {
+    createGrid()
+    {
         let bloc = document.getElementById('board');
         let table = document.createElement('table');
         let tbody = document.createElement('tbody');
@@ -31,7 +34,8 @@ class GenGrid {
         createPlayer();
     }
 
-    getRandomCell() {
+    getRandomCell()
+    {
         let randomInt = 0;
         let id = null;
         let cell = null;
@@ -58,7 +62,8 @@ class GenGrid {
         return cell;
     }
 
-    createNoAccess() {
+    createNoAccess()
+    {
         let cell = null;
         for (let i = 0; i < 25; i++) {
             cell = getRandomCell();
@@ -67,7 +72,8 @@ class GenGrid {
         }
     }
 
-    createWeapon() {
+    createWeapon()
+    {
         let cell = null;
         //let weapon = new Weapon();
         //let Cell = new Cell('data-access', null, null);
@@ -79,21 +85,28 @@ class GenGrid {
         }
     }
 
-    createPlayer() {
+    createPlayer()
+    {
         let cellPlayer1 = getRandomCell(); //document.getElementById(id + randomInt);
         cellPlayer1.setAttribute('data-player', "player1");
         let cellPlayer2 = getRandomCell();
         cellPlayer2.setAttribute('data-player', "player2");
     }
-    createPlayer() {
-        for (let i = 0 ; i < this.playerTab.length; i++) {
+
+    createPlayer()
+    {
+        for (let i = 0; i < this.playerTab.length; i++) {
             let randomCell = getRandomCell();
             this.playerTab[i].position = randomCell;
             randomCell.setAttribute('data-player', this.playerTab[i].id);
         }
+    }
 }
 
-export {GenGrid};
+
+export default GenGrid;
+
+
 
 
 /* class Grid {

@@ -42,11 +42,10 @@ function createGrid() {
 
 function getRandomCell() {
   var randomInt = 0;
-  var i = 0;
   var id = null;
   var cell = null;
 
-  for (i = 0; i < 100; i++) {
+  for (var i = 0; i < 100; i++) {
     randomInt = Math.floor(Math.random() * 100);
 
     if (randomInt < 10) {
@@ -125,27 +124,61 @@ function createWeapon() {
 }
 
 var playerTab = [{
-  "id": 1,
-  "name": name_j1
+  "id": "player-1",
+  "name": name_j1,
+  "life": 100,
+  "weapon": null,
+  "move": null,
+  "position": null
 }, {
-  "id": 2,
-  "name": name_j2
+  "id": "player-2",
+  "name": name_j2,
+  "life": 100,
+  "weapon": null,
+  "move": null,
+  "position": null
 }];
+/*function createPlayer() {
+    for (let i = 0; i < playerTab.length; i++) {
+        let randomCell = getRandomCell();
+        playerTab[i].position = randomCell;
+        randomCell.setAttribute('data-player', playerTab[i].id);
+    }
+}*/
 
 function createPlayer() {
-  var cellPlayer1 = getRandomCell(); //document.getElementById(id + randomInt);
-
+  var cellPlayer1 = getRandomCell();
   cellPlayer1.setAttribute('data-player', "player1");
+  playerTab[0].position = cellPlayer1;
   var cellPlayer2 = getRandomCell();
   cellPlayer2.setAttribute('data-player', "player2");
-} //Insérer la grille dans le HTML
+  playerTab[1].position = cellPlayer2;
+}
+/*function availableMove() {
+    for (let i = 0; i < playerTab.length; i++) {
+        let currentCellId = document.getElementById(playerTab[i].position); //td-57
+        let currentCell = currentCellId[3] + currentCellId[4];
+        let access = [-30, -20, -10, -3, -2, -1, 1, 2, 3, 10, 20, 30];
+        let availableCells = [];
+        for (let number of access) {
+            availableCells.push("td-" + (number + currentCell));
+        }
+        for (let element of availableCells) {
+            let accessibleCell = document.getElementById(element);
+            if (!accessibleCell.hasAttribute('data-player)' && !accessibleCell.hasAttribute('data-access')) { //Comment gérer les fins/début de ligne?
+            accessibleCell.setAttribute('data-playeraccess', 1);
+        }
+    }
+}
+}*/
+//Insérer la grille dans le HTML
 
 
 $(document).ready(function () {
   createGrid();
   createNoAccess();
   createWeapon();
-  createPlayer();
+  createPlayer(); //availableMove();
 });
 /*$(document).ready(function() {
     let grid = new GenGrid(10, 10);

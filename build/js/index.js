@@ -1,6 +1,8 @@
 "use strict";
 
-var _genGrid = require("../js/genGrid");
+var _genGrid = _interopRequireDefault(require("../js/genGrid"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 //Demander le nom des joueurs
 var name_j1 = prompt("Entrez le nom du joueur 1 : ");
@@ -16,6 +18,6 @@ if (!name_j2 || name_j2 === "") {
 
 
 $(document).ready(function () {
-  var grid = new _genGrid.GenGrid(10, 10);
+  var grid = new _genGrid["default"](10, 10);
   grid.createGrid();
 }); //cd /c/Users/User/Desktop/OPENCLASSROOMS/p6_plateau
