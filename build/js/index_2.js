@@ -4,18 +4,18 @@
 //import {GenGrid} from "../js/genGrid";
 //import {Weapon} from "./weapon";
 //import {Cell} from "./cell";
-var name_j1 = prompt("Entrez le nom du joueur 1 : ");
+
+/*var name_j1 = prompt("Entrez le nom du joueur 1 : ");
 var name_j2 = prompt("Entrez le nom du joueur 2 : ");
 
 if (!name_j1 || name_j1 === "") {
-  name_j1 = "Joueur 1";
+    name_j1 = "Joueur 1";
 }
 
 if (!name_j2 || name_j2 === "") {
-  name_j2 = "Joueur 2";
-} //Function to generate the empty grid
-
-
+    name_j2 = "Joueur 2";
+}*/
+//Function to generate the empty grid
 function createGrid() {
   var bloc = document.getElementById('board');
   var table = document.createElement('table');

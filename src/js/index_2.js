@@ -125,7 +125,7 @@ function createWeapon() {
 
 let playerTab = [
     {
-        "id": "player-1",
+        "id": "player1",
         "name": name_j1,
         "life": 100,
         "weapon": null,
@@ -133,7 +133,7 @@ let playerTab = [
         "position": null
     },
     {
-        "id": "player-2",
+        "id": "player2",
         "name": name_j2,
         "life": 100,
         "weapon": null,
@@ -142,21 +142,14 @@ let playerTab = [
     }
 ];
 
-/*function createPlayer() {
+function createPlayer() {
     for (let i = 0; i < playerTab.length; i++) {
         let randomCell = getRandomCell();
         playerTab[i].position = randomCell;
         randomCell.setAttribute('data-player', playerTab[i].id);
     }
-}*/
-function createPlayer() {
-    let cellPlayer1 = getRandomCell();
-    cellPlayer1.setAttribute('data-player', "player1");
-    playerTab[0].position = cellPlayer1;
-    let cellPlayer2 = getRandomCell();
-    cellPlayer2.setAttribute('data-player', "player2");
-    playerTab[1].position = cellPlayer2;
 }
+
 
 
 /*function availableMove() {
