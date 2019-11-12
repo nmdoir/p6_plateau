@@ -148,14 +148,16 @@ function createPlayer() {
         playerTab[i].position = randomCell;
         randomCell.setAttribute('data-player', playerTab[i].id);
     }
+    console.log(playerTab);
 }
 
 
 
-/*function availableMove() {
+function availableMove() {
     for (let i = 0; i < playerTab.length; i++) {
-        let currentCellId = document.getElementById(playerTab[i].position); //td-57
+        let currentCellId = document.hasAttribute('data-player').id; //ou = playerTab[i].position
         let currentCell = currentCellId[3] + currentCellId[4];
+        console.log(currentCellId);
         let access = [-30, -20, -10, -3, -2, -1, 1, 2, 3, 10, 20, 30];
         let availableCells = [];
         for (let number of access) {
@@ -163,12 +165,12 @@ function createPlayer() {
         }
         for (let element of availableCells) {
             let accessibleCell = document.getElementById(element);
-            if (!accessibleCell.hasAttribute('data-player)' && !accessibleCell.hasAttribute('data-access')) { //Comment gérer les fins/début de ligne?
+            if (!accessibleCell.hasAttribute('data-player') && !accessibleCell.hasAttribute('data-access')) { //Comment gérer les fins/début de ligne?
             accessibleCell.setAttribute('data-playeraccess', 1);
         }
     }
 }
-}*/
+}
 
 
 
@@ -179,7 +181,7 @@ $(document).ready(function() {
     createNoAccess();
     createWeapon();
     createPlayer();
-    //availableMove();
+    availableMove();
 });
 
 /*$(document).ready(function() {
